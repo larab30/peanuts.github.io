@@ -1,0 +1,112 @@
+        <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Momentos Clásicos — El Mundo de Peanuts</title>
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="style/momentos.css">
+    </head>
+    <body>
+    <header>
+        <h1>Momentos Clásicos</h1>
+    </header>
+
+    <main>
+        <div class="back">
+        <a href="index.html">← Volver al inicio</a>
+        <a href="conoce_personajes.html">← Ver personajes</a>
+        </div>
+
+        <section class="hero" aria-label="Imagen destacada de momentos clásicos">
+        <img src="images/clasicos_pagina.jpg" alt="Snoopy y la pandilla en momentos clásicos" />
+        </section>
+
+        <section class="section" aria-labelledby="galeria-title">
+        <h2 id="galeria-title">Galería de momentos</h2>
+        <div class="grid">
+            <article class="card">
+            <img src="images/as_aereo.png" alt="Snoopy como As Aéreo en su caseta" />
+            <h3>El As Aéreo</h3>
+            <p>Batallas imaginarias contra el Barón Rojo desde lo alto de su caseta.</p>
+            </article>
+            <article class="card">
+            <img src="images/gran-calabaza.jpg" alt="Linus esperando a la Gran Calabaza" />
+            <h3>La Gran Calabaza</h3>
+            <p>La fe de Linus cada Halloween, una tradición tan tierna como divertida.</p>
+            </article>
+            <article class="card">
+            <img src="images/footballer-lucy.jpg" alt="Lucy quitando el balón a Charlie Brown" />
+            <h3>El balón y Lucy</h3>
+            <p>La perseverancia de Charlie Brown puesta a prueba… una vez más.</p>
+            </article>
+            <article class="card">
+            <img src="images/woodstuckysnoopy.jpg" alt="Woodstock y Snoopy" />
+            <h3>Amistad mini</h3>
+            <p>Woodstock y Snoopy, un dúo inseparable y caóticamente adorable.</p>
+            </article>
+            <article class="card">
+            <img src="images/piano.jpg" alt="Schroeder tocando a Beethoven" />
+            <h3>Beethoven en miniatura</h3>
+            <p>El piano de Schroeder y la insistencia (eterna) de Lucy.</p>
+            </article>
+            <article class="card">
+            <img src="images/linus-manta.jpg" alt="Linus con su manta de seguridad" />
+            <h3>La manta de Linus</h3>
+            <p>Seguridad, ternura y filosofía en formato de tira cómica.</p>
+            </article>
+        </div>
+        </section>
+
+        <!-- Tira del día -->
+        <section class="strip-wrap" aria-labelledby="strip-title">
+        <h2 id="strip-title" style="text-align:center;color:var(--accent);margin:0 0 12px">Tira del día</h2>
+        <div class="strip" aria-label="Desliza lateralmente para ver las tiras">
+            <article class="panel">
+            <img src="images/piloto.jpg" alt="Tira 1 de Peanuts">
+            <div class="cap"><strong>Tira 1:</strong> Snoopy prepara su imaginación para despegar.</div>
+            </article>
+            <article class="panel">
+            <img src="images/terapia.jpg" alt="Tira 2 de Peanuts">
+            <div class="cap"><strong>Tira 2:</strong> Lucy en su puesto de ‘Ayuda psiquiátrica’ explica a Charlie Brown que los sueños tienen propósito; él se frustra.</div>
+            </article>
+            <article class="panel">
+            <img src="images/betobenylucy.jpg" alt="Tira 3 de Peanuts">
+            <div class="cap"><strong>Tira 3:</strong> Lucy intenta que Betoben la invite al baile futuro; él toca el piano y la rechaza con calma.</div>
+            </article>
+        </div>
+        </section>
+
+        <!-- Bingo Peanuts -->
+        <section class="bingo" aria-labelledby="bingo-title">
+        <h2 id="bingo-title" style="text-align:center;color:var(--accent);margin:0 0 12px">Bingo Peanuts</h2>
+        <div class="board" role="group" aria-label="Bingo de momentos clásicos">
+            <!-- Fila 1 -->
+            <div class="cell"><input id="b1" type="checkbox"><label for="b1">Snoopy escribe su novela</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b2" type="checkbox"><label for="b2">Lucy “psiquiatra” 5¢</label><div class="ink">✓</div></div>
+            <div class="cell free"><input id="b3" type="checkbox" checked><label for="b3">FREE</label><div class="ink">★</div></div>
+            <div class="cell"><input id="b4" type="checkbox"><label for="b4">Linus con manta</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b5" type="checkbox"><label for="b5">Woodstock en apuros</label><div class="ink">✓</div></div>
+            <!-- Fila 2 -->
+            <div class="cell"><input id="b6" type="checkbox"><label for="b6">Charlie intenta patear</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b7" type="checkbox"><label for="b7">La Gran Calabaza</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b8" type="checkbox"><label for="b8">Sally una ocurrencia</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b9" type="checkbox"><label for="b9">Peppermint Patty confunde algo</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b10" type="checkbox"><label for="b10">Schroeder & Beethoven</label><div class="ink">✓</div></div>
+            <!-- Fila 3 -->
+            <div class="cell"><input id="b11" type="checkbox"><label for="b11">Snoopy As Aéreo</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b12" type="checkbox"><label for="b12">Charlie reflexiona</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b13" type="checkbox"><label for="b13">Lucy mueve el balón</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b14" type="checkbox"><label for="b14">Marcie da un dato</label><div class="ink">✓</div></div>
+            <div class="cell"><input id="b15" type="checkbox"><label for="b15">Snoopy & Woodstock baile</label><div class="ink">✓</div></div>
+        </div>
+        <p class="legend">Marca lo que vayas viendo en la página o recuerdes de los cómics. ¡Completa una línea!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 El Mundo de Peanuts. Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+    </body>
+    </html>
