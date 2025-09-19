@@ -28,9 +28,20 @@
     .back{max-width:1100px;margin:10px auto 0;padding:0 20px;display:flex;gap:10px;flex-wrap:wrap}
     .back a{font-weight:700;display:inline-block;background:rgba(255,255,255,.85);padding:.45rem .8rem;border-radius:999px;border:2px solid #ffcc00}
 
-    /* Hero simple */
-    .hero{display:flex;justify-content:center;margin:22px 0}
-    .hero img{width:90%;max-width:980px;border-radius:16px;box-shadow:0 8px 16px rgba(0,0,0,.18)}
+        .hero {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .hero img {
+      width: 65%;        /* más pequeña */
+      max-width: 550px;  /* límite de ancho */
+      display: block;    /* asegura que no tenga espacios extra */
+      margin: 0 auto;    /* doble seguridad de centrado */
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    }
 
     .section{max-width:1100px;margin:42px auto;padding:0 20px}
     .section h2{text-align:center;color:var(--accent);margin:0 0 18px}
@@ -84,3 +95,4 @@
     width:100%;
     }
     footer a{font-weight:700}
+
