@@ -1,0 +1,86 @@
+    :root{
+    --grad-a:#ffde59;--grad-b:#ff9900;--bg:#fff8f0;--ink:#333;
+    --card:#ffe6b3;--panel:#fff0d4;--accent:#ff6600;
+    }
+    *{box-sizing:border-box}
+    html, body { height: 100%; }
+    body{
+    margin:0;
+    font-family:'Comic Neue',cursive, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+
+    header{
+    background:linear-gradient(90deg,var(--grad-a),var(--grad-b));
+    padding:28px 20px;
+    text-align:center;
+    box-shadow:0 4px 8px rgba(0,0,0,.08)
+    }
+    header h1{margin:0;color:#fff;text-shadow:2px 2px #ffa500;font-size:2.4rem}
+
+    /* Botones de regreso */
+    .back{max-width:1100px;margin:10px auto 0;padding:0 20px;display:flex;gap:10px;flex-wrap:wrap}
+    .back a{font-weight:700;display:inline-block;background:rgba(255,255,255,.85);padding:.45rem .8rem;border-radius:999px;border:2px solid #ffcc00}
+
+    /* Hero simple */
+    .hero{display:flex;justify-content:center;margin:22px 0}
+    .hero img{width:90%;max-width:980px;border-radius:16px;box-shadow:0 8px 16px rgba(0,0,0,.18)}
+
+    .section{max-width:1100px;margin:42px auto;padding:0 20px}
+    .section h2{text-align:center;color:var(--accent);margin:0 0 18px}
+    .section:last-of-type{margin-bottom:0}
+
+    /* Galería básica */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .card{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 6px 12px rgba(0,0,0,.1)}
+    .card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+    .card h3{margin:12px 6px 6px;color:var(--accent)}
+    .card p{margin:0 6px 8px}
+
+    /* Tira del día */
+    .strip-wrap{max-width:1100px;margin:42px auto 0;padding:0 20px}
+    .strip{
+    display:flex;gap:12px;overflow-x:auto;padding:8px;
+    scroll-snap-type:x mandatory;border-radius:14px;background:var(--panel);
+    box-shadow:0 6px 12px rgba(0,0,0,.1)
+    }
+    .panel{flex:0 0 86%; max-width:86%; scroll-snap-align:center;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+    @media (min-width:900px){ .panel{flex:0 0 62%; max-width:62%} }
+    .panel img{display:block;width:100%}
+    .panel .cap{padding:10px 12px}
+    .panel .cap strong{color:var(--accent)}
+
+    /* Bingo */
+    .bingo{max-width:900px;margin:42px auto 0;padding:0 20px}
+    .board{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .cell{
+    position:relative;background:var(--panel);border-radius:12px;min-height:96px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);padding:10px;display:flex;align-items:center;justify-content:center;text-align:center
+    }
+    .cell input{position:absolute;inset:0;opacity:0;cursor:pointer}
+    .cell label{z-index:1;font-weight:700}
+    .cell input:checked ~ .ink{opacity:1;transform:scale(1)}
+    .ink{
+    position:absolute;inset:6px;border-radius:10px;border:3px dashed #ff9900;
+    background:rgba(255,217,130,.35);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:#a85b00;letter-spacing:1px;opacity:0;transform:scale(.95);transition:.15s
+    }
+    .free{background:#ffe7a6}
+    .legend{margin:10px 0 0;text-align:center;font-size:.95rem;opacity:.9}
+
+    footer{
+    background:#ffcc00;
+    padding:15px 0;
+    text-align:center;
+    font-size:0.9em;
+    margin-top:auto;
+    width:100%;
+    }
+    footer a{font-weight:700}

@@ -1,0 +1,149 @@
+    /* Layout base: empuja el footer al fondo */
+    html, body {
+    height: 100%;
+    }
+    body {
+    margin: 0;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background: #fff8f0;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    header {
+    background: linear-gradient(90deg, #ffde59, #ff9900);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px #ffa500;
+    }
+
+    /* El contenido va dentro de <main> y ocupa el espacio disponible */
+    main { flex: 1; }
+
+    .hero {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    }
+
+    .hero img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    .intro {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    }
+
+    /* --- Sección de tarjetas --- */
+    .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+    }
+
+    .card {
+    background: #ffe6b3;
+    padding: 20px;
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+    width: 100%;
+    border-radius: 10px;
+    }
+
+    .card h3 {
+    margin: 15px 0 10px;
+    color: #ff6600;
+    }
+
+    .quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+    margin: 50px 20px;
+    color: #ff8000;
+    }
+
+    /* --- Noticias y curiosidades --- */
+    .section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    }
+
+    .section h2 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 30px;
+    }
+
+    .news, .curiosities, .quotes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    }
+
+    .news-item, .curio-item, .quote-item {
+    background: #fff0d4;
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    }
+
+    .news-item:hover, .curio-item:hover, .quote-item:hover {
+    transform: translateY(-5px);
+    }
+
+    .news-item img, .curio-item img, .quote-item img {
+    width: 100%;
+    border-radius: 10px;
+    }
+
+    /* Footer amarillo que llega al fondo */
+    footer {
+    background: #ffcc00;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+    width: 100%;
+    }
+
+    footer a {
+    color: #333;
+    font-weight: bold;
+    }
