@@ -69,6 +69,7 @@
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
     }
 
     .card:hover {
@@ -84,6 +85,23 @@
     .card h3 {
     margin: 15px 0 10px;
     color: #ff6600;
+    }
+
+    /* Botón dentro de la tarjeta */
+    .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #ff9900;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+    }
+
+    .btn:hover {
+    background: #ff6600;
     }
 
     .quote {
@@ -147,3 +165,9 @@
     color: #333;
     font-weight: bold;
     }
+
+    footer a {
+    color: #333;
+    font-weight: bold;
+    }
+
