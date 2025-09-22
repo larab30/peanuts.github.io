@@ -1,0 +1,196 @@
+    :root{
+    --grad-a:#ffde59;
+    --grad-b:#ff9900;
+    --bg:#fff8f0;
+    --ink:#333;
+    --panel:#fff0d4;
+    --accent:#ff6600;
+    --card:#fff;
+    }
+
+    *{ box-sizing:border-box }
+    html, body{ margin:0; padding:0; }
+
+    body{
+    font-family:'Comic Neue', cursive, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    }
+
+    /* ===== Header ===== */
+    header{
+    background:linear-gradient(90deg,var(--grad-a),var(--grad-b));
+    padding:24px 20px;
+    text-align:center;
+    box-shadow:0 4px 8px rgba(0,0,0,.08);
+    }
+    header h1{
+    margin:0;
+    color:#fff;
+    text-shadow:2px 2px #ffa500;
+    font-size:2rem;
+    }
+
+    /* ===== Layout ===== */
+    main{
+    flex:1;
+    max-width:1100px;
+    margin:22px auto;
+    padding:0 20px;
+    }
+
+    /* ===== Navegación ===== */
+    .back{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+    }
+    .back a{
+    font-weight:700;
+    display:inline-block;
+    background:rgba(255,255,255,.85);
+    padding:.45rem .8rem;
+    border-radius:999px;
+    border:2px solid #ffcc00;
+    text-decoration:none;
+    color:var(--ink);
+    transition:.25s;
+    }
+    .back a:hover{ background:#ffcc00; color:#000; }
+    .chip{ padding:.25rem .6rem; border:1px solid #999; border-radius:999px; }
+
+    /* ===== Secciones / tarjetas ===== */
+    .section{ margin:24px 0; }
+    .section h2{
+    margin:0 0 12px;
+    color:var(--accent);
+    font-size:1.6rem;
+    letter-spacing:.2px;
+    }
+    .card{
+    background:var(--panel);
+    padding:14px 16px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    }
+
+    /* ===== Grid de videos ===== */
+    .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:16px;
+    }
+
+    /* ===== Tarjeta de video ===== */
+    .vcard{
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .vcard:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+    }
+
+    /* Títulos y textos */
+    .vcard h3{
+    margin:.25rem 0 0;
+    font-size:1.1rem;
+    }
+    .meta{
+    margin:0;
+    color:#555;
+    font-size:.95rem;
+    }
+
+    /* Descripción de cada video */
+    .desc{
+    margin:.25rem 0 0;
+    line-height:1.45;
+    color:#444;
+    font-size:.98rem;
+    /* Si quieres limitar a 3 líneas, descomenta:
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    */
+    }
+
+    /* ===== Reproductor ===== */
+    .player{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;      /* Mantiene proporción 16:9 */
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+    }
+    @supports not (aspect-ratio: 16 / 9){
+    .player{ height:0; padding-bottom:56.25%; }
+    .player > *{ position:absolute; inset:0; }
+    }
+    .player video,
+    .player iframe{
+    width:100%;
+    height:100%;
+    display:block;
+    border:0;
+    background:#000;
+    }
+
+    /* Subtítulos (si usas <track>) – estilo base, sujeto al navegador */
+    ::cue{
+    background:rgba(0,0,0,.6);
+    color:#fff;
+    font-family:inherit;
+    font-size:.9rem;
+    }
+
+    /* ===== Footer ===== */
+    footer{
+    background:#ffcc00;
+    padding:15px 0;
+    text-align:center;
+    font-size:1em;
+    margin-top:auto;
+    width:100vw;
+    position:relative;
+    left:0;
+    }
+    footer a{ font-weight:700; color:#333; text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+
+    /* ===== Accesibilidad ===== */
+    a:focus-visible,
+    button:focus-visible,
+    iframe:focus-visible,
+    video:focus-visible{
+    outline:3px solid #ff9900;
+    outline-offset:2px;
+    border-radius:8px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (min-width:1200px){
+    .grid{ gap:20px; }
+    }
+    @media (max-width:420px){
+    header h1{ font-size:1.6rem; }
+    .section h2{ font-size:1.35rem; }
+    }
+
+
+
+
+
