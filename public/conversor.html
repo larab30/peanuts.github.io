@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor Pesos a Dolares</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>Conversor de Pesos a Dolares</h1>
+
+    <label for="pesos">Pesos:</label>
+    <input type="number" id="pesos" step="0.01" min="0" />
+
+    <label for="tipoCambio">Tipo de cambio:</label>
+    <input type="number" id="tipoCambio" step="0.01" min="0.01" value="17.00" />
+
+    <button id="btnConvertir">Convertir</button>
+
+    <label for="dolares">Dolares:</label>
+    <input type="text" id="dolares" readonly />
+
+    <a href="/" class="back-link">Volver al menu</a>
+    </div>
+
+    <script src="conversor.js"></script>
+</body>
+</html>

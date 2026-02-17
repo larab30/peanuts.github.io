@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Promedio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Promedio</h1>
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+    <label>Unidad 1:</label>
+    <input type="number" id="unidad1" min="0" max="10">
+
+    <label>Unidad 2:</label>
+    <input type="number" id="unidad2" min="0" max="10">
+
+    <label>Unidad 3:</label>
+    <input type="number" id="unidad3" min="0" max="10">
+
+    <button id="btnCalcular">Calcular promedio</button>
+
+    <label>Promedio:</label>
+    <input type="text" id="promedio" readonly>
+
+    <label>Estatus:</label>
+    <input type="text" id="estatus" readonly>
+
+    <div id="resultado"></div>
+    <a href="/" class="back-link">Volver al menu</a>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg-top: #fff7fb;
+  --bg-bottom: #eaf4ff;
+  --ink: #334155;
+  --muted: #64748b;
+  --surface: #ffffff;
+  --surface-edge: #e5e7f3;
+  --accent: #f4a7b9;
+  --accent-2: #c9b6ff;
+  --focus: rgba(201, 182, 255, 0.28);
+  --shadow: 0 16px 36px rgba(148, 163, 184, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 28px;
+  font-family: 'Sora', sans-serif;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(900px 520px at 12% 8%, rgba(255, 255, 255, 0.95) 0%, transparent 62%),
+    radial-gradient(780px 420px at 88% 92%, rgba(244, 167, 185, 0.22) 0%, transparent 66%),
+    linear-gradient(140deg, var(--bg-top), var(--bg-bottom));
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+}
+
+h1,
+label,
+input,
+button,
+.back-link {
+  width: min(430px, 92vw);
+}
+
+h1 {
+  margin: 0 0 18px;
+  padding: 24px 24px 0;
+  font-size: clamp(1.45rem, 2.9vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #475569;
+}
+
+label {
+  display: block;
+  margin: 10px 0 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+input,
+button {
+  border-radius: 14px;
+}
+
+input {
+  border: 1.5px solid var(--surface-edge);
+  padding: 13px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+input:focus {
+  border-color: #c9b6ff;
+  box-shadow: 0 0 0 4px var(--focus);
+  transform: translateY(-1px);
+}
+
+#dolares {
+  background: #fdf7ff;
+  border-color: #e8dcff;
+  font-weight: 800;
+  color: #6d5ba6;
+}
+
+#btnConvertir {
+  margin: 20px 0 8px;
+  border: 0;
+  padding: 13px 14px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(201, 182, 255, 0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+#btnConvertir:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(201, 182, 255, 0.5);
+  filter: saturate(1.04);
+}
+
+#btnConvertir:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(201, 182, 255, 0.4);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  isolation: isolate;
+}
+
+body > :not(h1):not(.back-link) {
+  background: var(--surface);
+  border-left: 1px solid var(--surface-edge);
+  border-right: 1px solid var(--surface-edge);
+}
+
+body > label:first-of-type {
+  border-top: 1px solid var(--surface-edge);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 0;
+  padding: 16px 24px 0;
+}
+
+body > input,
+body > button,
+body > label,
+.back-link {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+body > input,
+body > button {
+  width: min(430px, 92vw);
+  margin-bottom: 2px;
+}
+
+body > input#dolares {
+  margin-bottom: 14px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 1px solid var(--surface-edge);
+  box-shadow: var(--shadow);
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 700;
+  color: #586380;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 18px;
+  }
+
+  h1,
+  body > label,
+  body > input,
+  body > button,
+  .back-link {
+    width: min(100%, 440px);
+  }
+
+  h1 {
+    padding: 18px 18px 0;
+  }
+
+  body > input,
+  body > button,
+  body > label,
+  .back-link {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
